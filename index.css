@@ -1,0 +1,56 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Fasthand&display=swap");
+
+/* Reset CSS */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+body {
+  overflow: hidden;
+}
+
+* img {
+  pointer-events: none;
+}
+
+
+
+/* Pour désactiver un lien avant de résoudre l'énigme */
+.disabled {
+  pointer-events: none;
+} 
+
+/* Cacher la barre de scroll */
+* {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+
+/* Enlever le "chargement" de la page */
+@-webkit-@keyframes remove {
+  100% {
+    display: none;
+  }
+}
+@keyframes remove {
+  100% {
+    display: none;
+  }
+}

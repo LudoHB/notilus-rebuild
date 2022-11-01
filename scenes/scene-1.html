@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapitre 1 - No'Til'Us</title>
+
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font-awesome free icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+  <link rel="stylesheet" href="../index.css">
+  <link rel="stylesheet" href="../css/scene-1.css">
+</head>
+
+<body>
+  <!-- Musique de fond -->
+  <embed name="NoTilUs main theme - by Hadrien" src="../assets/sounds/main-theme.mp3" loop="true" hidden="true"
+    autostart="true" />
+
+  <div id="loader"
+    class="fixed top-0 right-0 bottom-0 left-0 bg-black text-gray-200 flex flex-col gap-6 justify-center align-center text-center z-[9999]">
+    <div>
+      <i class="fa-6x fa-solid fa-spinner fa-spin-pulse"></i>
+    </div>
+    <p class="text-xl"><i class="fa fa-ship mr-3"></i>En avant l'aventure !</p>
+  </div>
+
+  <div id="scene" class="relative w-full h-screen max-h-screen">
+
+    <div id="overlay" class="z-[999]">
+      <!-- Titre de la scene -->
+      <h2
+        class="absolute top-3 left-3 lg:top-6 lg:left-6 text-gray-200 text-md py-3 px-5 bg-indigo-900 opacity-40 w-fit rounded uppercase font-bold">
+        #1 - Le port</h2>
+
+      <!-- boutons options et inventaire -->
+      <div class="absolute top-3 right-3 lg:top-6 lg:right-6 flex gap-3 lg:gap-6 z-[999]">
+        <div id="btn-message"
+          class="text-gray-200 py-3 px-5 bg-indigo-900 w-fit rounded uppercase font-bold hover:scale-110 transition-transform">
+          <i id="icon-message" class="fa-solid fa-message"></i>
+        </div>
+        <div id="btn-stuff"
+          class="hidden relative text-gray-200 py-3 px-5 bg-indigo-900 w-fit rounded uppercase font-bold hover:scale-110 transition-transform">
+          <i id="icon-stuff" class="fa-solid fa-trophy"></i>
+        </div>
+        <div id="btn-hint"
+          class="text-gray-200 py-3 px-5 bg-indigo-900 w-fit rounded uppercase font-bold hover:scale-110 transition-transform">
+          <i class="fa-solid fa-skull"></i>
+        </div>
+        <div id="btn-options"
+          class="text-gray-200 py-3 px-5 bg-indigo-900 w-fit rounded uppercase font-bold hover:scale-110 transition-transform">
+          <i class="fa-solid fa-cog"></i>
+        </div>
+      </div>
+
+      <!-- bouton "Suivant" -->
+      <div id="btn-finish-scene" class="absolute bottom-3 right-3 lg:bottom-6 lg:right-6 flex gap-3 lg:gap-6 z-[999]">
+        <a href="./scene-2.html"
+          class="text-gray-200 text-lg py-3 px-5 bg-green-900 w-fit rounded-md uppercase font-bold hover:scale-105 transition-transform opacity-60 hover:opacity-100">
+          <i class="fa-solid fa-check"></i><span class="ml-3">Continuer</span>
+        </a>
+      </div>
+    </div>
+    <!-- - - - - - - - - - - - - - - - - -->
+    <!-- - - - - - - - - - - - - - - - - -->
+
+    <!-- Dialogues -->
+    <div id="message"
+      class="bg-gray-900/90 text-gray-200 absolute top-0 left-0 w-full h-full flex justify-center items-center z-[99]">
+      <div class="relative px-3">
+        <div class="flex items-end gap-6 mb-6">
+          <div>
+            <i id="close-message"
+              class="fa-2x fa-solid fa-times absolute right-0 top-0 hover:scale-150 transition-transform"></i>
+            <h2 class="text-indigo-400 uppercase font-bold text-2xl"><i class="fa-solid fa-message mr-3"></i>Phil :</h2>
+          </div>
+          <img src="../assets/characters/phil-anim.gif" alt=""
+            class="max-w-[300px] max-h-[300px] ml-6 animation-bounce">
+        </div>
+        <div class="text-xl max-w-[850px]">
+          <p class="mb-6">Hé toi l’boucanier ! M’appel Phil ! Ramène toi m’filer un coup
+            d’main ! L’pirates d’mon rafiot sont fait j’té un sort !</p>
+          <div id="answers-btn" class="flex gap-3 lg:gap-6">
+            <button id="answer-yes"
+              class="text-gray-200 text-lg py-3 px-5 bg-green-900 w-fit rounded-md uppercase font-bold hover:scale-105 transition-transform opacity-60 hover:opacity-100">
+              <i class="fa-solid fa-check"></i><span class="ml-3">Accepter</span>
+            </button>
+            <button id="answer-no"
+              class="text-gray-200 text-lg py-3 px-5 bg-red-900 w-fit rounded-md uppercase font-bold hover:scale-105 transition-transform opacity-60 hover:opacity-100">
+              <i class="fa-solid fa-times"></i><span class="ml-3">Refuser</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Astuces -->
+    <div id="hint"
+      class="hidden bg-gray-900/90 text-gray-200 absolute top-0 left-0 w-full h-full flex justify-center items-center z-[99]">
+      <div class="relative">
+        <i id="close-hint" class="fa-2x fa-solid fa-times absolute right-0 top-0 hover:scale-150
+          transition-transform"></i>
+        <p class="text-indigo-400 text-lg uppercase font-bold mb-6"><i
+            class="fa-2x fa-solid fa-skull mr-3"></i>Astuce(s) de Phil :</p>
+        <p class="text-xl max-w-[900px]">J'crois qu't'as pas trop l'choix jeune loup de mer.</p>
+      </div>
+    </div>
+
+    <!-- Mini-jeux & Stuff -->
+    <div id="stuff"
+      class="hidden bg-gray-900/90 text-gray-200 absolute top-0 left-0 w-full h-full flex justify-center items-center z-[99]">
+      <div class="relative">
+        <i id="close-stuff"
+          class="fa-2x fa-solid fa-times absolute right-0 top-0 hover:scale-150 transition-transform"></i>
+        <p class="text-indigo-400 text-lg uppercase font-bold mb-6"><i class="fa-2x fa-solid fa-trophy mr-3"></i>Vous
+          devez résoudre l'énigme</p>
+        <div class="text-xl max-w-[850px]">
+          <p class="mb-3 first-letter:text-3xl">Corem, ipsum dolor
+            sit amet consectetur. Quibusdam iste animi cupiditate temporibus cumque culpa sapiente autem harum earum
+            consequatur!</p>
+          <p class="mb-3 ml-3 first-letter:text-2xl">Lorem, ipsum dolor
+            sit amet consectetur adipisicing elit.</p>
+          <p class="mb-3 ml-3 first-letter:text-2xl">Aorem, cupiditate temporibus cumque culpa
+            sapiente autem harum earum consequatur!</p>
+          <p class="mb-3 ml-3 first-letter:text-2xl">Rorem, quibusdam iste animi cupiditate
+            temporibus cumque culpa sapiente autem harum earum consequatur!</p>
+          <p class="first-letter:text-3xl">Aorem, ipsum dolor
+            sit amet consectetur. Quibusdam iste animi cupiditate temporibus cumque culpa sapiente autem harum earum
+            consequatur!</p>
+          <button id="btn-answer"
+            class="mt-6 py-3 px-6 hover:pl-8 bg-indigo-600 rounded-md uppercase fon-bold">Répondre</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Options -->
+    <div id="options"
+      class="hidden bg-gray-900/90 text-gray-200 absolute top-0 left-0 w-full h-full flex justify-center items-center z-[99]">
+      <div class="relative">
+        <i id="close-options" class="fa-2x fa-solid fa-times absolute right-0 top-0 hover:scale-150
+              transition-transform"></i>
+        <p class="text-indigo-400 text-lg uppercase font-bold mb-6"><i class="fa-2x fa-solid fa-cog mr-3"></i>Options :
+        </p>
+        <p class="text-xl max-w-[900px]">Pas d'options pour le moment moussaillon !!</p>
+      </div>
+    </div>
+
+
+  </div><!-- Fin de #scene -->
+
+  <script src="../app.js"></script>
+  <script src="../js/scene-1.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapitre 3 - No'Til'Us</title>
+
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font-awesome free icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+  <link rel="stylesheet" href="../css/scene-3.css">
+</head>
+
+<body>
+  <!-- Musique de fond -->
+  <embed name="NoTilUs main theme - by Hadrien" src="../assets/sounds/main-theme.mp3" loop="true" hidden="true"
+    autostart="true" />
+
+  <div id="loader"
+    class="fixed top-0 right-0 bottom-0 left-0 bg-black text-gray-200 flex flex-col gap-6 justify-center align-center text-center z-[9999]">
+    <div>
+      <i class="fa-4x fa-solid fa-spinner fa-spin-pulse"></i>
+    </div>
+    <p class="text-xl"><i class="fa fa-ship mr-3"></i>En avant l'aventure !</p>
+  </div>
+
+  <div id="scene" class="relative w-full h-screen max-h-screen">
+
+    <div id="overlay">
+      <!-- Titre de la scene -->
+      <h2
+        class="absolute top-3 left-3 lg:top-6 lg:left-6 text-gray-200 text-lg py-3 px-5 bg-indigo-900 w-fit rounded uppercase font-bold z-[99]">
+        #3 - La cale (1/2)</h2>
+
+      <!-- boutons options et inventaire -->
+      <div class="absolute  top-3 right-3 lg:top-6 lg:right-6 flex gap-3 lg:gap-6 z-[99]">
+        <div
+          class="text-gray-200 py-3 px-5 bg-indigo-900 w-fit rounded uppercase font-bold hover:scale-110 transition-transform opacity-40 hover:opacity-100">
+          <i class="fa-solid fa-message"></i>
+        </div>
+        <div
+          class="text-gray-200 py-3 px-5 bg-indigo-900 w-fit rounded uppercase font-bold hover:scale-110 transition-transform opacity-40 hover:opacity-100">
+          <i class="fa-solid fa-sack-xmark"></i>
+        </div>
+        <div
+          class="text-gray-200 py-3 px-5 bg-indigo-900 w-fit rounded uppercase font-bold hover:scale-110 transition-transform opacity-40 hover:opacity-100">
+          <i class="fa-solid fa-cog"></i>
+        </div>
+      </div>
+
+      <!-- bouton "Suivant" -->
+      <a href="./scene-4.html"
+        class="absolute right-6 bottom-6 text-gray-200 text-lg py-3 px-5 bg-indigo-900 w-fit rounded uppercase font-bold hover:scale-105 transition-transform opacity-60 hover:opacity-100 z-[999]"><i
+          class="fa-solid fa-arrow-right"></i><span class="ml-3 hidden">Suivant</span></a>
+    </div>
+    <!-- - - - - - - - - - - - - - - - - -->
+    <!-- - - - - - - - - - - - - - - - - -->
+
+    <div id="game">
+
+
+
+    </div>
+
+
+  </div><!-- Fin de #scene -->
+
+  <script src="../app.js"></script>
+  <script src="../js/scene-3.js"></script>
+</body>
+
+</html>

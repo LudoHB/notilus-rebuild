@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NO'TIL'US</title>
+
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font-awesome free icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./css/homepage.css">
+
+
+</head>
+
+<body>
+
+  <embed name="NoTilUs main theme - by Hadrien" src="./assets/sounds/main-theme.mp3" loop="true" hidden="true"
+    autostart="true">
+
+  <div id="loader"
+    class="fixed top-0 right-0 bottom-0 left-0 bg-black text-gray-200 flex flex-col gap-6 justify-center align-center text-center z-[9999]">
+    <div>
+      <i class="fa-4x fa-solid fa-spinner fa-spin-pulse"></i>
+    </div>
+    <p class="text-xl"><i class="fa fa-lightbulb mr-3"></i>Si vous êtes en difficulté, utilisez le coup de Phil...</p>
+  </div>
+
+  <div id="scene">
+
+    <div id="fogs">
+      <img id="yellow-fog" src="./assets/bg/yellowfog.png">
+      <img id="fog2" src="./assets/bg/fog.png">
+    </div>
+
+    <div id="moon"></div>
+
+    <a href="./scenes/scene-1.html"
+      class="off-link fixed top-[50%] left-[50%] translate-x-[-50%] text-gray-200 text-lg py-3 px-5 bg-indigo-900/50 hover:bg-indigo-900 w-fit rounded uppercase font-bold hover:scale-105 transition-transform z-[999]">Commencer</a>
+
+  </div>
+
+  <script src="./app.js"></script>
+  <script src="./js/homepage.js"></script>
+</body>
+
+</html>

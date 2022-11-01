@@ -1,0 +1,7 @@
+#scene {
+  background-image: url('../assets/bg/cale.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: default;
+}
